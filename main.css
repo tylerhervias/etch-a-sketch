@@ -3,3 +3,19 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+}
+
+.grid-container {
+  display: grid;
+  width: 750px;
+  height: 750px;
+  border: 2px solid #b8b8b8;
+}
+
+.grid-element {
+  border: 1px solid #d8d8d8;
+}
