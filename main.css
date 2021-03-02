@@ -11,7 +11,11 @@ body {
 }
 
 .heading {
-  margin: 25px 0px;
+  margin-top: 25px;
+}
+
+.button {
+  margin: 15px 0px;
 }
 
 .grid-container {
