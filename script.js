@@ -15,7 +15,7 @@ function setGrid(rows, cols) {
 };
 
 function setColor(event) {
-  event.target.classList.add('highlighted');
+  event.target.style.backgroundColor = '#000000';
 }
 
 setGrid(16, 16);
