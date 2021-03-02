@@ -20,16 +20,29 @@ function setGrid(rows, cols) {
 // Resets each grid square to its default state
 function resetGrid() {
   // Prompts the user for a new grid size
-  let newSize = prompt("Enter new grid size");
+  let newSize = prompt("Enter new grid size (Min: 1/Max: 100)");
 
-  // Removes each individual square from the grid
-  let gridArray = Array.from(gridContainer.childNodes);
-  gridArray.forEach((element) => {
-    gridContainer.removeChild(element);
-  });
+  if(newSize != null && newSize >= 1 && newSize <= 100) {
+    // Removes each individual square from the grid
+    let gridArray = Array.from(gridContainer.childNodes);
 
-  // Creates the new grid size
-  setGrid(newSize, newSize);
+    gridArray.forEach((element) => {
+      gridContainer.removeChild(element);
+    });
+
+    // Creates the new grid size
+    setGrid(newSize, newSize);
+  } else {
+    // Removes each individual square from the grid
+    let gridArray = Array.from(gridContainer.childNodes);
+
+    gridArray.forEach((element) => {
+      gridContainer.removeChild(element);
+    });
+
+    // Set grid to the default size
+    setGrid(16, 16);
+  }
 }
 
 // Changes the background color of each square on hover
