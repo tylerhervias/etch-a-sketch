@@ -10,7 +10,12 @@ function setGrid(rows, cols) {
     let gridElement = document.createElement("div");
     gridContainer.appendChild(gridElement);
     gridElement.classList = 'grid-element';
+    gridElement.addEventListener("mouseover", setColor);
   };
 };
+
+function setColor(event) {
+  event.target.classList.add('highlighted');
+}
 
 setGrid(16, 16);
