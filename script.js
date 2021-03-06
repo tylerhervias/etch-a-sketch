@@ -47,7 +47,11 @@ function resetGrid() {
 
 // Changes the background color of each square on hover
 function setColor(event) {
-  event.target.style.backgroundColor = "#000000";
+  var randomRValue = Math.floor(Math.random() * 256);
+  var randomGValue = Math.floor(Math.random() * 256);
+  var randomBValue = Math.floor(Math.random() * 256);
+
+  event.target.style.backgroundColor = "rgb(" + randomRValue + "," + randomGValue + "," + randomBValue + ")";
 }
 
 setGrid(16, 16);
