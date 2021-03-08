@@ -1,9 +1,11 @@
+/* CSS Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* Main Styling */
 body {
   display: flex;
   flex-direction: column;
@@ -18,13 +20,22 @@ body {
   margin: 15px 0px;
 }
 
+/* Grid Elements */
 .grid-container {
   display: grid;
-  width: 750px;
-  height: 750px;
+  width: 500px;
+  height: 500px;
   border: 2px solid #b8b8b8;
 }
 
 .grid-element {
   border: 1px solid #d8d8d8;
+}
+
+/* Media Queries */
+@media (max-width: 550px) {
+  .grid-container {
+    width: 300px;
+    height: 300px;
+  }
 }
