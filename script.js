@@ -21,8 +21,9 @@ function setGrid(rows, cols) {
 function resetGrid() {
   // Prompts the user for a new grid size
   let newSize = prompt("Enter new grid size (Min: 1/Max: 100)");
+  newSize = parseFloat(newSize);
 
-  if(newSize != null && newSize >= 1 && newSize <= 100) {
+  if(newSize != null && newSize >= 1 && newSize <= 100 && Number.isInteger(newSize)) {
     // Removes each individual square from the grid
     let gridArray = Array.from(gridContainer.childNodes);
 
@@ -33,15 +34,7 @@ function resetGrid() {
     // Creates the new grid size
     setGrid(newSize, newSize);
   } else {
-    // Removes each individual square from the grid
-    let gridArray = Array.from(gridContainer.childNodes);
-
-    gridArray.forEach((element) => {
-      gridContainer.removeChild(element);
-    });
-
-    // Set grid to the default size
-    setGrid(16, 16);
+    alert("New grid size must be a whole number between 1 and 100");
   }
 }
 
